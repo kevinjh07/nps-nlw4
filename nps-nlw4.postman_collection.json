@@ -6,30 +6,95 @@
 	},
 	"item": [
 		{
-			"name": "POST /users",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"teste\",\n    \"email\": \"teste@nlw.com.br\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "User",
+			"item": [
+				{
+					"name": "POST /users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"email\": \"test@nlw.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/users",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"users"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "POST /surveys",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Queremos ouvir sua opinião!\",\n    \"description\": \"De 0 a 10, quanto você recomendaria a Rocketseat?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/surveys",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /surveys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Queremos ouvir sua opinião!\",\n    \"description\": \"De 0 a 10, quanto você recomendaria a Rocketseat?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/surveys",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"surveys"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
